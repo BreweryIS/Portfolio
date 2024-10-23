@@ -2,7 +2,7 @@ import profile from "../assets/profile.png";
 
 const Card = () => {
   return (
-    <section className="w-10/12 bg-bg relative top-4 mx-auto h-[350px]">
+    <section className="w-10/12 bg-bg  mx-auto ">
       <div className="bg-light p-2 flex items-center">
         <div className="bg-gradient-to-r from-primary to-secondary rounded-full">
           <img
