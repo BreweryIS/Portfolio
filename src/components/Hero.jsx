@@ -16,12 +16,12 @@ const Hero = () => {
             </h1>
           </div>
           <div className="py-3">
-            <p className="text-light"></p>
+            <p className="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium velit voluptatem aut amet, aspernatur a provident molestias voluptate dolor quos?</p>
           </div>
           <div className="py-3">
             <div className="text-light flex gap-2 items-center">
               <ImSmile />
-              <span></span>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
             </div>
           </div>
           <div className="bg-btn w-64 rounded-sm">

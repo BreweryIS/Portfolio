@@ -1,8 +1,32 @@
+import { useEffect, useState } from "react";
 import profile from "../assets/profile.png";
 
 const Card = () => {
+  const [repoCount, setRepoCount] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchGitHubRepoCount = async () => {
+      const username = "BreweryIS";
+      const url = `https://api.github.com/users/${username}`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setRepoCount(data.public_repos);
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+    console.log(error);
+    fetchGitHubRepoCount();
+  }, []);
+
   return (
-    <section className="w-10/12 bg-bg  mx-auto ">
+    <section className="w-9/12 bg-bg  mx-auto  relative top-[20px]">
       <div className="bg-light p-2 flex items-center">
         <div className="bg-gradient-to-r from-primary to-secondary rounded-full">
           <img
@@ -24,9 +48,7 @@ const Card = () => {
         <img src={profile} alt="" />
       </div>
       <div className="bg-light p-2">
-        <p>
-         
-        </p>
+        <p>Repository : {repoCount}</p>
       </div>
     </section>
   );
