@@ -1,5 +1,11 @@
-import { useEffect, useState } from "react";
-import profile from "../assets/profile.png";
+import { useContext, useEffect, useState } from "react";
+import profile from "../assets/profile.jpg";
+import { ResumeContext } from "../context/ResumeContext";
+import { IoPersonCircleOutline } from "react-icons/io5";
+import { DiCode } from "react-icons/di";
+import { MdLanguage } from "react-icons/md";
+import { MdOutlineWorkOutline } from "react-icons/md";
+
 
 const Card = () => {
   const [repoCount, setRepoCount] = useState(null);
@@ -25,32 +31,50 @@ const Card = () => {
     fetchGitHubRepoCount();
   }, []);
 
+  const { handleResume } = useContext(ResumeContext);
+
   return (
-    <section className="w-9/12 bg-bg  mx-auto  relative top-[20px]">
-      <div className="bg-light p-2 flex items-center">
-        <div className="bg-gradient-to-r from-primary to-secondary rounded-full">
-          <img
-            src={profile}
-            alt=""
-            height={50}
-            width={50}
-            className="object-contain aspect-square"
-          />
-        </div>
-        <div className="w-full p-2">
-          <h1 className="text-primary font-bold text-sm">
-            Athiprat Owkusumsirisakul
-          </h1>
-          <p className="text-sm">Chaing Mai</p>
-        </div>
+    <card className="w-full">
+      <div className="w-11/12 overflow-hidden border rounded-full mx-auto">
+        <img src={profile} alt="" className="outline-none " />
       </div>
-      <div className="w-full bg-gradient-to-r from-primary to-secondary">
-        <img src={profile} alt="" />
+      <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-between items-center gap-2 mt-8">
+        <button
+          onClick={() => handleResume("aboutme")}
+          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+        >
+          <h4 className="flex gap-1 items-center">
+            <IoPersonCircleOutline className="text-2xl" />
+            About Me
+          </h4>
+        </button>
+        <button
+          onClick={() => handleResume("skills")}
+          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+        >
+          <h4 className="flex gap-1 items-center">
+            <DiCode className="text-3xl" />
+            Skills
+          </h4>
+        </button>
+        <button
+          onClick={() => handleResume("language")}
+          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+        >
+          <h4 className="flex gap-1 items-center">
+            <MdLanguage className="text-xl" />
+            Language
+          </h4>
+        </button>
+        <button
+          onClick={() => handleResume("workexp")}
+          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+        >
+          <h4 className="flex gap-1 items-center"><MdOutlineWorkOutline className="text-3xl"/>
+          Work Experience</h4>
+        </button>
       </div>
-      <div className="bg-light p-2">
-        <p>Repository : {repoCount}</p>
-      </div>
-    </section>
+    </card>
   );
 };
 
