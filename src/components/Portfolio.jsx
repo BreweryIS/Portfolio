@@ -13,12 +13,12 @@ import furniture6 from "../assets/furniture6.png";
 
 const Portfolio = () => {
   return (
-    <div id="portfolio" className="w-10/12 flex flex-col justify-center items-center py-8 mx-auto bg-bglight min-w-[500px]">
-      <div className="w-10/12 flex flex-col lg:flex-row text-center">
-        <div className="lg:w-6/12 pb-7 lg:p-0 text-8xl text-center text-primary">
-          <h1>Portfolio</h1>
+    <div id="portfolio" className="w-10/12 flex flex-col justify-center items-center py-6 lg:py-20 mx-auto min-w-[500px] bg-gradient-to-r from-bglight via-gray-700 to-bg">
+      <div className="w-10/12 flex flex-col lg:flex-row">
+        <div className="lg:w-6/12 pb-7 lg:p-0 text-4xl lg:text-8xl text-center text-primary">
+          <h1><span className="border-b-2 border-secondary">Portfolio</span></h1>
         </div>
-        <div className="lg:w-6/12 text-xl text-primary">
+        <div className="lg:w-6/12 text-xl text-primary lg:pt-7">
           <p>
           Front-end projects developed using HTML, CSS, JavaScript, React, and Tailwind. Currently, I'm gaining experience and consistently building new projects through practical work.
           </p>

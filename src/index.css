@@ -1,10 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
   margin: 0;
@@ -26,4 +29,27 @@ body {
 
 .fade-in-repeat {
   animation: fadeInRepeat 4s ease-in-out infinite;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(102, 207, 255, 0.8);
 }

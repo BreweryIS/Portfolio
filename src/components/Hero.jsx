@@ -13,16 +13,16 @@ const Hero = () => {
     switch (resume) {
       case "aboutme":
         content = (
-          <>
-            <div className="text-primary mt-7">
+          <div key={1} className="fade-in">
+            <div className="text-primary">
               <TextSwitcher />
             </div>
-            <div className="py-3 text-primary">
-              <h1 className="font-bold text-3xl">Athiprat Owkusumsirisakul</h1>
+            <div className="py-3 text-primary ">
+              <h1 className="font-bold text-3xl"><span className="border-b-2 border-secondary">Athiprat Owkusumsirisakul</span></h1>
             </div>
             <div className="py-3">
               <p className="text-primary text-lg">
-                สวัสดีครับ ผมชื่อเล่นว่า " เบียร์ " กำลังมองหางานตำแหน่ง Front
+                สวัสดีครับ ผมชื่อเล่นว่า "เบียร์" กำลังมองหางานตำแหน่ง Front
                 Ent ย้ายสายงานมาจาก วิศวกรโยธา เนื่องจากอยากทำงานให้สิ่งที่ชอบ
                 ค้นหาความท้าทายใหม่ๆ
                 ศึกษาหาความรู้จากคอร์สเรียนออนไลน์ประกอบกับศึกษาด้วยตนเอง
@@ -31,16 +31,16 @@ const Hero = () => {
               </p>
             </div>
             <div className="py-3">
-              <div className="flex gap-2 items-center text-primary">
-                <ImSmile className="text-3xl" />
-                <span>
-                  สามารถทำงาน Onsite ได้ในจังหวัดเชียงใหม่ หรือ wfh ก็ได้เช่นกัน
+              <div className="gap-2 items-center text-primary flex">
+                <ImSmile className="text-8xl" />
+                <span>สามารถทำงานร่วมกับทุกเพศ ทุกวัย เปิดกว้างรับฟังความคิดเห็นทุกความเห็น ปรับปรุงเปลี่ยนแปลงตัวเองให้เข้ากับที่ทำงานได้ง่าย
+                  และสามารถทำงาน Onsite ได้ในจังหวัดเชียงใหม่ หรือ wfh ก็ได้เช่นกัน
                 </span>
               </div>
             </div>
             <div className="flex justify-center">
               <a href="/resume.pdf" download>
-                <div className="group hover:bg-secondary w-64 p-3 text-primary flex justify-between items-center font-bold mt-3 border-2 border-secondary">
+                <div className="shadow-2xl group hover:bg-secondary w-64 p-3 text-primary flex justify-between items-center font-bold mt-3 border-2 border-secondary">
                   <div className="">Download CV</div>
                   <div className="p-2 rounded-full border bg-secondary group-hover:bg-bg">
                     <BsDownload className="text-xl text-white" />
@@ -48,14 +48,14 @@ const Hero = () => {
                 </div>
               </a>
             </div>
-          </>
+          </div>
         );
         break;
       case "skills":
         content = (
-          <div className="py-6 flex justify-center items-center m-4 w-full text-primary">
+          <div key={2} className="fade-in pb-24 flex justify-center items-center w-full text-primary">
             <ul className="list-disc text-xl flex flex-col gap-4">
-              <span className="text-4xl font-bold">Skills</span>
+              <span className="text-4xl font-bold"><span className="border-b-2 border-secondary">Skills</span></span>
               <li>HTML, CSS, JavaScript</li>
               <li>React</li>
               <li>Tailwind CSS, Bootstrap</li>
@@ -68,9 +68,9 @@ const Hero = () => {
         break;
       case "language":
         content = (
-          <div className="py-6 flex justify-center items-center m-4 w-full text-primary">
+          <div key={3} className="fade-in pb-24 flex justify-center items-center m-4 w-full text-primary">
             <ul className="list-disc text-xl flex flex-col gap-4 pt-3">
-              <span className="text-4xl font-bold">Language</span>
+              <span className="text-4xl font-bold"><span className="border-b-2 border-secondary">Language</span></span>
               <li>Thai: Proficient</li>
               <li>English: Intermediate</li>
             </ul>
@@ -79,12 +79,12 @@ const Hero = () => {
         break;
       case "workexp":
         content = (
-          <>
-            <div className="py-5 flex justify-center items-center m-4 w-full text-primary">
-              <h3 className="text-4xl font-bold">Work Experience</h3>
+          <div key={4} className="fade-in">
+            <div className="flex justify-center items-center m-4 w-full text-primary">
+              <h3 className="text-4xl font-bold"><span className="border-b-2 border-secondary">Work Experience</span></h3>
             </div>
             <div className="mb-10 text-primary border-2 p-4 bg-bg">
-              <ul className="text-xl">
+              <ul className="text-xl text-secondary">
                 Project Engineer Karnkanok Property Co., Ltd. | 2013-2024
               </ul>
               <li className="text-lg">
@@ -93,7 +93,7 @@ const Hero = () => {
               </li>
             </div>
             <div className="mb-10 text-primary border-2 p-4 bg-bg">
-              <ul className="text-xl">
+              <ul className="text-xl text-secondary">
                 Civil Engineer Italian-Thai Development Public Co., Ltd. |
                 2011-2012
               </ul>
@@ -111,7 +111,7 @@ const Hero = () => {
                 as React and Tailwind CSS.
               </div>
             </div>
-          </>
+          </div>
         );
         break;
       default:
@@ -123,12 +123,12 @@ const Hero = () => {
   const content = resumeCase(resume);
 
   return (
-    <section id="aboutme" className="w-10/12 flex justify-center items-center py-8 mx-auto bg-bglight min-w-[500px]">
-      <div className="w-9/12 flex flex-col xl:flex-row gap-12">
-        <div className="flex-1">
+    <section id="aboutme" className="w-10/12 flex justify-center items-center py-8 mx-auto min-w-[500px] min-h-[100vh] bg-gradient-to-r from-bg via-gray-700 to-bglight">
+      <div className="w-9/12 flex flex-col xl:flex-row gap-12 min-h-[90vh]">
+        <div className="flex-1 my-auto">
           <Card />
         </div>
-        <div className="flex-1">{content}</div>
+        <div className="flex-1 my-auto">{content}</div>
       </div>
     </section>
   );

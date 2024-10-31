@@ -8,7 +8,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 
 
 const Card = () => {
-  const [repoCount, setRepoCount] = useState(null);
+  // const [repoCount, setRepoCount] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -27,30 +27,29 @@ const Card = () => {
         setError(error.message);
       }
     };
-    console.log(error);
     fetchGitHubRepoCount();
   }, []);
 
   const { handleResume } = useContext(ResumeContext);
 
   return (
-    <card className="w-full">
-      <div className="w-11/12 overflow-hidden border rounded-full mx-auto">
+    <section className="w-full">
+      <div className="w-11/12 overflow-hidden border rounded-full mx-auto shadow-2xl">
         <img src={profile} alt="" className="outline-none " />
       </div>
       <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-between items-center gap-2 mt-8">
         <button
           onClick={() => handleResume("aboutme")}
-          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+          className="shadow-2xl h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary transition-all ease-in-out duration-300 text-primary"
         >
           <h4 className="flex gap-1 items-center">
-            <IoPersonCircleOutline className="text-2xl" />
+            <IoPersonCircleOutline className="text-3xl" />
             About Me
           </h4>
         </button>
         <button
           onClick={() => handleResume("skills")}
-          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+          className="shadow-2xl h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary transition-all ease-in-out duration-300 text-primary"
         >
           <h4 className="flex gap-1 items-center">
             <DiCode className="text-3xl" />
@@ -59,7 +58,7 @@ const Card = () => {
         </button>
         <button
           onClick={() => handleResume("language")}
-          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+          className="shadow-2xl h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary transition-all ease-in-out duration-300 text-primary"
         >
           <h4 className="flex gap-1 items-center">
             <MdLanguage className="text-xl" />
@@ -68,13 +67,13 @@ const Card = () => {
         </button>
         <button
           onClick={() => handleResume("workexp")}
-          className="h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary text-primary"
+          className="shadow-2xl h-[75px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary transition-all ease-in-out duration-300 text-primary"
         >
           <h4 className="flex gap-1 items-center"><MdOutlineWorkOutline className="text-3xl"/>
           Work Experience</h4>
         </button>
       </div>
-    </card>
+    </section>
   );
 };
 

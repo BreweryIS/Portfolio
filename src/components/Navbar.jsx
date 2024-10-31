@@ -18,9 +18,8 @@ const Navbar = () => {
 
   return (
     <div
-      id="home"
       className={`${
-        isActive ? "bg-bglight shadow-sm" : "bg-transparent"
+        isActive ? "bg-bglight shadow-xl" : "bg-transparent"
       } fixed left-0 right-0 w-10/12 flex justify-between items-center py-4 text-primary mx-auto gap-3 min-w-[500px] z-50`}
     >
       <div className="flex gap-3 pl-7 justify-center items-center ">
@@ -30,7 +29,7 @@ const Navbar = () => {
         <ul className="flex gap-3 pr-7 font-bold text-md">
           {link.map((item, index) => (
             <li key={index}>
-              <a href={item.path}>{item.label}</a>
+              <div className="hover:text-secondary transition-all duration-300 ease-in-out"><a href={item.path}>{item.label}</a></div>
             </li>
           ))}
         </ul>
