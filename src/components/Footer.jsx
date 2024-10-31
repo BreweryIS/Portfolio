@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
   const [birthday, setBirthday] = useState(0);
@@ -12,11 +12,11 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="w-10/12 flex justify-center items-center flex-col min-w-[500px] mx-auto"
+      className="w-12/12 flex justify-center items-center flex-col min-w-[320px] mx-auto"
     >
       <div className="bg-gradient-to-b from-bg via-gray-900 to-bglight  w-full text-primary text-center">
         <div>
-          <h1 className=" font-bold text-3xl p-3">
+          <h1 className=" font-bold text-2xl md:text-3xl p-3">
             <span className="border-b-2 border-secondary">Contact Me</span>
           </h1>
           <p className="p-2">Name : Athiprat Owkusumsirisakul</p>
