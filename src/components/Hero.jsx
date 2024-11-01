@@ -62,6 +62,9 @@ const Hero = () => {
               <li>Node.js</li>
               <li>MongoDB</li>
               <li>Postman</li>
+              <li>Figma, Canva</li>
+              <li>VS Code</li>
+              <li>Github</li>
             </ul>
           </div>
         );
