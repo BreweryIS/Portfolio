@@ -10,7 +10,7 @@ const Navbar = () => {
     { label: "Contact", path: "#contact" },
   ];
 
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 35 ? setIsActive(true) : setIsActive(false);
