@@ -123,7 +123,7 @@ const Hero = () => {
   const content = resumeCase(resume);
 
   return (
-    <section id="aboutme" className="w-12/12 flex justify-center items-center py-8 mx-auto min-w-[320px] min-h-[100vh] bg-gradient-to-r from-bg via-gray-700 to-bglight">
+    <section id="aboutme" className="w-12/12 flex justify-center items-center pt-16 mx-auto min-w-[320px] min-h-[100vh] bg-gradient-to-r from-bg via-gray-700 to-bglight">
       <div className="w-9/12 flex flex-col xl:flex-row gap-12 min-h-[90vh]">
         <div className="flex-1 my-auto">
           <Card />

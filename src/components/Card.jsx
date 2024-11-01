@@ -34,10 +34,10 @@ const Card = () => {
 
   return (
     <section className="w-full">
-      <div className="w-10/12 sm:w-6/12 xl:w-11/12 overflow-hidden border rounded-full mx-auto shadow-2xl">
+      <div className="w-10/12 sm:w-6/12 xl:w-11/12 max-w-xl overflow-hidden border rounded-full mx-auto shadow-2xl">
         <img src={profile} alt="" className="outline-none " />
       </div>
-      <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-between items-center gap-2 mt-8">
+      <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-between items-center gap-2 mt-8 md:mt-16">
         <button
           onClick={() => handleResume("aboutme")}
           className="shadow-2xl h-[55px] md:h-[60px] p-3 border-2 border-secondary cursor-pointer gruop relative hover:bg-secondary transition-all ease-in-out duration-300 text-primary"

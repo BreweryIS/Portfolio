@@ -47,7 +47,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="w-10/12 mx-auto grid lg:grid-cols-2 gap-6 mt-12">
-        <div className="grid grid-cols-2 gap-6 items-center">
+        <div className="grid grid-cols-2 gap-6 items-center order-2 lg:order-1">
           <div className="flex flex-col gap-6">
             <div className="w-full border-2 border-gray-500 rounded-xl overflow-hidden">
               <img src={furniture2} alt="" />
@@ -65,7 +65,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex items-center">
+        <div className="w-full flex items-center order-1 ">
           <div className="border-2 border-gray-500 rounded-xl overflow-hidden"><img src={furniture1} alt="" /></div>
         </div>
       </div>
